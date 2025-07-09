@@ -1,32 +1,301 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julia de Lima | Portfólio</title>
+  <style>
+    :root {
+      --roxo-principal: #6a4c93;
+      --roxo-claro: #d3c5e5;
+      --roxo-escuro: #2e1e40;
+      --fundo-container: rgba(255, 255, 255, 0.04);
+      --fundo-geral: #1a1124;
+      --branco: #ffffff;
+    }
+
+    body {
+      background-color: var(--fundo-geral);
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--roxo-claro);
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 35px 40px;
+      background: var(--fundo-container);
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(106, 76, 147, 0.25);
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid var(--roxo-principal);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+
+    h1, h2 {
+      color: var(--roxo-principal);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: 40px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--roxo-principal);
+      margin: 30px auto;
+      width: 60%;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.1em;
+      margin: 10px 0;
+      color: var(--roxo-claro);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    ul li {
+      padding: 8px 0;
+      text-align: center;
+      font-size: 1.05em;
+    }
+
+    table {
+      width: 85%;
+      margin: 25px auto;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    th, td {
+      padding: 14px;
+      border: 1px solid var(--roxo-principal);
+      text-align: center;
+    }
+
+    th {
+      background-color: var(--roxo-principal);
+      color: var(--fundo-geral);
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .contact-info a {
+      color: var(--roxo-principal);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #b89dd9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--roxo-principal);
+      color: var(--branco);
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #b89dd9;
+      transform: scale(1.05);
+    }
+
+    .projetos {
+      background-color: rgba(106, 76, 147, 0.08);
+      border: 1px solid var(--roxo-principal);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(106, 76, 147, 0.25);
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      table {
+        width: 100%;
+        font-size: 0.95em;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.4em;
+      }
+    }
+  </style>
 </head>
 <body>
-   <h1>TEXTO 1</h1>
-   <h2>TEXTO 2</h2>
-   <h3>TEXTO 3</h3>
-   <h4>TEXTO 4</h4>
-   <h5>TEXTO 5</h5>
-   <h6>TEXTO 6</h6>
-   <p>vai <b>corinthians</b>
-    <br>
-    !<p>
-<strong>TEXTO FODA</strong>
-<br>
-<em>TEXTO FODA 2</em>
-<br>
-  <mark>TEXTO MARCA</mark>
-  <br>
-  <small>palmeiras</small>
-  <br>
-  <ins>texto inserido</ins>
-  <br>
-  <sub>texto subemiso</sub>
-  <section></section>
-    
+  <div class="container">
+    <img src="perfil.jpg" alt="Foto de Julia de Lima" class="profile-img" />
+    <h1>Julia de Lima</h1>
+    <p>Estudante de Ciências de Dados | 17 anos | Guaramirim - SC</p>
+
+    <hr>
+
+    <h2>Sobre Mim</h2>
+    <p>Sou uma estudante determinada e proativa, atualmente cursando Técnico em Ciências de Dados no CEDUP Perfeito Manoel de Aguiar. Tenho grande interesse em análise de dados, visualização e tecnologias voltadas à inovação e impacto social.</p>
+    <p>Possuo facilidade de comunicação, inclusive em inglês, e estou sempre em busca de novas experiências que contribuam para o meu desenvolvimento pessoal e profissional.</p>
+
+    <hr>
+
+    <h2>Formação Acadêmica</h2>
+    <ul>
+      <li>📘 Técnico em Ciências de Dados — CEDUP Perfeito Manoel de Aguiar (2023–2025)</li>
+    </ul>
+
+    <h2>Cursos Complementares</h2>
+    <ul>
+      <li>Implantação de Banco de Dados – Fundação Bradesco (2024)</li>
+      <li>Excel na Prática – Fundação Bradesco (2024)</li>
+      <li>Introdução à Análise de Dados com Microsoft BI – Fundação Bradesco (2024)</li>
+      <li>Visualização de Banco de Dados no Power BI – Fundação Bradesco (2024)</li>
+      <li>Informática Básica – Curso Presencial (2018)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Premiações</h2>
+    <ul>
+      <li>🥈 2º lugar no Desafio Nacional de Banco de Dados – Vivo (2024)</li>
+      <li>🥉 3º lugar na Feira de Ciências – CEDUP (2024)</li>
+    </ul>
+
+    <hr>
+
+    <h2>Habilidades Técnicas</h2>
+<table>
+  <tr>
+    <th>Habilidade</th>
+    <th>Nível</th>
+  </tr>
+  <tr>
+    <td>Power BI</td>
+    <td>Básico</td>
+  </tr>
+  <tr>
+    <td>Excel</td>
+    <td>Básico</td>
+  </tr>
+  <tr>
+    <td>Canva</td>
+    <td>Básico</td>
+  </tr>
+  <tr>
+    <td>Comunicação e Trabalho em Equipe</td>
+    <td>Básico</td>
+  </tr>
+  <tr>
+    <td>Compreensão de Inglês</td>
+    <td>Básico</td>
+  </tr>
+</table>
+
+
+    <hr>
+
+    <div class="projetos">
+      <h2>Projetos Pessoais</h2>
+      <ul>
+        <li>
+          <li>
+            <strong>AquaVac – Inovação e Sustentabilidade</strong><br>
+            Projeto idealizado durante o Innovation Camp (2024), focado no desenvolvimento de um dispositivo de captação, tratamento e reuso de água em áreas alagadas.<br>
+            
+          </li>
+          
+        </li>
+        <br>
+        <li>
+          <strong>Dialoga – Tecnologia e Acolhimento</strong><br>
+          Aplicativo voltado ao atendimento de pessoas em situação de vulnerabilidade, promovendo escuta especializada e acolhimento digital.<br>
+          <a href="https://dialoga.app.br/" target="_blank" class="btn">🔗 Acessar o Dialoga</a>
+        </li>
+        <br>
+        <li>
+          <strong>Site 1 – Portfólio Visual</strong><br>
+          Projeto no Google Sites com informações profissionais organizadas.<br>
+          <a href="https://sites.google.com/d/18vgD7CaDnf1IK9nkKScjHG_8M848wj2D/p/1xlFzji2I1Y_Qk2rOCoP2T2Gr_LSimqCI/edit" target="_blank" class="btn">🔗 Acessar Site 1</a>
+        </li>
+        <br>
+        <li>
+          <strong>Site 2 – Apresentação de Conteúdos</strong><br>
+          Site educativo desenvolvido com o Google Sites.<br>
+          <a href="https://sites.google.com/d/12teM9QyuzDK0xGkzkHcJdJjrdNbCsqpP/p/1053rhxoyAxGN43PGX9tu8eEbMjOKj-DD/edit" target="_blank" class="btn">🔗 Acessar Site 2</a>
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="projetos">
+      <h2>Projetos com Dashboards</h2>
+      <ul>
+        <li>
+          <strong>Análise de Desempenho de Alunos (Power BI)</strong><br>
+          Dashboard interativo com dados escolares simulados.
+        </li>
+        <br>
+        <li>
+          <strong>Monitoramento de Gols e Escalações (Power BI)</strong><br>
+          Dashboard com dados de futebol: desempenho, aproveitamento e escalações.
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2>Contato</h2>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:juli.delima31@gmail.com">juli.delima31@gmail.com</a></p>
+      <p>📱 (47) 99668-6543</p>
+    </div>
+  </div>
 </body>
 </html>
